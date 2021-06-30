@@ -39,7 +39,7 @@ $(".share").on("click", function () {
   $(".fa-share").css("color", "blue");
 });
 // append ngày
-let date = new Date();
+/* let date = new Date();
 let ngayDang = "2021-06-30T04:20:14.441Z";
 let layGio = new Date(ngayDang);
 let khoangThoiGianms = date - layGio;
@@ -56,5 +56,5 @@ if (minutes < 60 && hours < 1 && day < 1) {
   $(".date").html(day + " " + "ngày trước");
 } else {
   $(".date").html("lỗi");
-}
+} */
 // console.log(minutes);
