@@ -1,0 +1,213 @@
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  color: white;
+  cursor: pointer;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo {
+  color: white;
+
+  width: 10%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: flex;
+}
+.noiDung {
+  width: 70%;
+  height: 44px;
+
+  display: flex;
+}
+#timKiem {
+  width: 100%;
+  height: 20px;
+  border: 0;
+  padding: 0;
+}
+.inpu {
+  display: flex;
+  align-items: center;
+  width: 70% !important;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#kinhLup {
+  background: white;
+  height: 20px;
+  padding: 0 0 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 30%;
+}
+.fa-search:before {
+  content: "\f002";
+  color: black;
+}
+.dangNhap {
+  width: 20%;
+  height: 44px;
+}
+.noiDung div {
+  width: 25%;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  /* cursor: pointer; */
+}
+.noiDung div:hover {
+  background: #423331;
+}
+.dangNhap {
+  line-height: 44px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  /* background-color: red; */
+}
+.dangNhap div {
+  padding: 0 3px;
+  line-height: 44px;
+  height: 44px;
+  /* background-color: red; */
+  box-sizing: border-box;
+}
+#logold {
+  background: url("pritesheet.PNG");
+  width: 34px;
+  height: 45.25px;
+  animation: movex 3s steps(13) infinite, movey 12s steps(4) infinite;
+}
+@keyframes movex {
+  0% {
+    background-position-x: -1px;
+  }
+  100% {
+    background-position-x: 450px;
+  }
+}
+@keyframes movey {
+  0% {
+    background-position-y: 0px;
+  }
+  100% {
+    background-position-y: -181px;
+  }
+}
+.logoAnh {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ld {
+  width: 50%;
+  height: 50px;
+}
+.cuon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px !important;
+  background: #423331;
+}
+/* .carousel-indicators {
+  margin-bottom: -17em;
+} */
+
+.carousel {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item {
+  width: 250px !important;
+  display: block !important;
+  margin-left: 4% !important;
+  margin-right: 0 !important;
+  /* position: absolute !important; */
+  /* top: 50%;
+  transform: translate(0, -50%); */
+}
+
+.carousel-inner {
+  display: block !important;
+}
+
+.list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.active {
+  display: none !important;
+}
+#spa {
+  margin-left: 10px !important;
+}
+#spa1 {
+  margin-left: 65px !important;
+  box-sizing: unset;
+}
+
+.carousel-control-prev {
+  transform: translate(-100%, 0);
+}
+
+.carousel-control-next {
+  transform: translate(100%, 0);
+}
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content {
+  width: 80%;
+  display: flex;
+}
+.sub-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+.param {
+  text-align: center;
+}
+.danhSach {
+  display: flex;
+  list-style: none;
+  /* padding-right: 10px; */
+}
+li {
+  padding: 0px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+b {
+  cursor: pointer;
+}
+.i-icon {
+  padding-right: 10px;
+}
+#active {
+  color: blue;
+}
