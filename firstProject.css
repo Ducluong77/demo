@@ -181,6 +181,7 @@
 .content {
   width: 80%;
   display: flex;
+  justify-content: center;
 }
 .sub-content {
   display: flex;
@@ -197,7 +198,7 @@
   /* padding-right: 10px; */
 }
 li {
-  padding: 0px 50px;
+  padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -210,4 +211,40 @@ b {
 }
 #active {
   color: blue;
+}
+.anh {
+  width: 350px;
+  /* height: 200px; */
+  height: auto;
+  float: left;
+  margin: 3px;
+  padding: 3px;
+}
+.anh img {
+  max-width: 100%;
+  height: auto;
+}
+.date {
+  width: 200px;
+  opacity: 50%;
+  text-align: center;
+}
+.number {
+  padding-left: 10px;
+}
+/* boostrap */
+input {
+  width: 90%;
+}
+.modal-body div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+p {
+  text-align: center;
+}
+.modal-login {
+  display: none;
 }

@@ -28,15 +28,28 @@ $(".carousel-control-prev-icon").on("click", function () {
   console.log(a);
 });
 var count = 0;
-$(".like").on("click", function () {
+$(".like").on("click", function (e) {
   count++;
-  $(".fa-thumbs-up").css("color", "blue");
+  let x = $(this).parents()[6];
+
+  let y = $(x).children()[0];
+  z = $(y).children()[1];
+  a = $(z).children()[2];
+  b = $(a).children()[0];
+  c = $(b).children()[0];
+  d = $(c).children()[2];
+  console.log(d, 1);
+  $(d).html(count);
+  let li = $(this).parents()[1];
+  $(li).css("color", "blue");
 });
 $(".comment").on("click", function () {
-  $(".fa-comment").css("color", "blue");
+  let li = $(this).parents()[1];
+  $(li).css("color", "blue");
 });
 $(".share").on("click", function () {
-  $(".fa-share").css("color", "blue");
+  let li = $(this).parents()[1];
+  $(li).css("color", "blue");
 });
 // append ngày
 let date = new Date();
@@ -57,4 +70,57 @@ if (minutes < 60 && hours < 1 && day < 1) {
 } else {
   $(".date").html("lỗi");
 }
-// console.log(minutes);
+// sửa
+// console.log($(".sua"));
+let change = `<div class="change">
+  <button class="sua">Change</button>
+  </div>`;
+$(".button").append(change);
+
+// let images;
+// $(".sua").each((index, element) => {
+//   $(element).on("click", function () {
+//     let fixurl = images[index];
+//     $(".modal").attr("style", "display:block");
+//     $(".btn-primary").on("click", function () {
+//       let getLink = $(".linkPicture").val();
+//       a = $(fixurl).attr("src", getLink);
+//       console.log(a);
+//       $(".modal").attr("style", "display:none");
+//       $(".btn-secondary").on("click", function () {
+//         $(".modal").attr("style", "display:none");
+//       });
+//     });
+//   });
+// });
+let img;
+// console.log($(".sua"));
+$(".sua").on("click", (e) => {
+  // console.log(e);
+  // console.log($(e.target).parents());
+  let content = $(e.target).parents()[6];
+  let anh = $(content).children()[0];
+  img = $(anh).children()[0];
+  content = $(content).children()[1];
+  titleContainer = $(content).children();
+  title = $(titleContainer)[0];
+  subTitle = $(titleContainer)[1];
+  // let sub = $(content).children()[1];
+  console.log(subTitle);
+  $(".modal").attr("style", "display:block");
+  $(".btn-primary").on("click", function () {
+    let getLink = $(".linkPicture").val();
+    let getTitle = $(".input-title").val();
+    getSubTitle = $(".input-subtitle").val();
+    a = $(img).attr("src", getLink);
+    $(title).html(getTitle);
+    $(subTitle).html(getSubTitle);
+    $(".modal").attr("style", "display:none");
+    $(".btn-secondary").on("click", function () {
+      $(".modal").attr("style", "display:none");
+    });
+  });
+});
+$(".btn-secondary").on("click", function () {
+  $(".modal").attr("style", "display:none");
+});
