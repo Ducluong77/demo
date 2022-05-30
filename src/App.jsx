@@ -1,13 +1,9 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-
-import './scss/styles.scss';
-import SecureRoute from 'routes/SecureRoute';
-import PrivateRoute from 'components/PrivateRoute';
-import { RouteBase } from 'constants/routeUrl';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { checkAuth } from 'redux/modules/auth';
-import LoginPage from 'views/Login';
+import PublicRoute from 'routes/PublicRoute';
+import './scss/styles.scss';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -20,8 +16,8 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path={RouteBase.Login} exact component={LoginPage} />
-        <PrivateRoute path={RouteBase.Home} component={SecureRoute} />
+        {/* <Route path={RouteBase.Login} exact component={LoginPage} /> */}
+        <PublicRoute />
       </Switch>
     </Router>
   );

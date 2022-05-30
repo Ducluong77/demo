@@ -33,7 +33,7 @@ const LoginPage = (props) => {
       {(propsFormik) => (
         <Form>
           <ErrorFocus />
-          <div>username: don & password: don</div>
+          <div>username: salad & password: salad</div>
           <div>
             <label htmlFor="username">UserName</label>
             <FastField component={InputField} name="username" />

@@ -4,7 +4,7 @@ import DefaultLayout from 'layout/DefaultLayout';
 
 import routes from './routes';
 
-export const SecureRoute = (props) => {
+export const PublicRoute = (props) => {
   return (
     <DefaultLayout>
       <Suspense fallback="Loading...">
@@ -18,4 +18,4 @@ export const SecureRoute = (props) => {
   );
 };
 
-export default SecureRoute;
+export default PublicRoute;

@@ -6,7 +6,7 @@ import { isEmpty } from 'lodash';
 function* login({ payload }) {
   const { username, password } = payload;
   try {
-    if (username === 'don' && password === 'don') {
+    if (username === 'salad' && password === 'salad') {
       yield put({ type: types.REQUEST_LOGIN_SUCCESS });
       authServices.saveUserLocalStorage({ username, isLogged: true });
     } else {

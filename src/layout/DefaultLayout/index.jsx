@@ -8,7 +8,9 @@ const DefaultLayout = (props) => {
   return (
     <Fragment>
       <Header />
-      <main className="main-container">{children}</main>
+      <main className="main-container" style={{ marginTop: '70px' }}>
+        {children}
+      </main>
       <Footer />
     </Fragment>
   );

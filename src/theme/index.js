@@ -11,6 +11,14 @@ export const theme = createTheme({
     },
   },
   components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#ffffff',
+          color: '#65748B',
+        },
+      },
+    },
     MuiButton: {
       defaultProps: {
         disableElevation: true,
