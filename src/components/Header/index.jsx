@@ -1,24 +1,21 @@
 import { AppBar, Box, Toolbar } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import React from 'react';
 import Logo from './Logo';
 import Others from './Others';
 import Sections from './Sections';
 
-const BoxLogoStyled = styled(Box)(({ theme }) => ({
-  '&': {
+const useStyles = makeStyles((theme) => ({
+  toolbar: {
+    padding: '0 50px',
+  },
+  logo: {
     flex: 3,
   },
-}));
-
-const BoxSectionsStyled = styled(Box)(({ theme }) => ({
-  '&': {
+  sections: {
     flex: 6,
   },
-}));
-
-const BoxSectionsOthers = styled(Box)(({ theme }) => ({
-  '&': {
+  others: {
     flex: 3,
     display: 'flex',
     justifyContent: 'flex-end',
@@ -26,18 +23,19 @@ const BoxSectionsOthers = styled(Box)(({ theme }) => ({
 }));
 
 const Header = (props) => {
+  const classes = useStyles();
   return (
     <AppBar>
-      <Toolbar>
-        <BoxLogoStyled>
+      <Toolbar className={classes.toolbar}>
+        <Box className={classes.logo}>
           <Logo />
-        </BoxLogoStyled>
-        <BoxSectionsStyled>
+        </Box>
+        <Box className={classes.sections}>
           <Sections />
-        </BoxSectionsStyled>
-        <BoxSectionsOthers>
+        </Box>
+        <Box className={classes.others}>
           <Others />
-        </BoxSectionsOthers>
+        </Box>
       </Toolbar>
     </AppBar>
   );

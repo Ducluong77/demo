@@ -1,20 +1,12 @@
-import React from 'react';
-import { Button, Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const StyledBox = styled(Box)(({ theme }) => ({
   '&': {
     display: 'flex',
     justifyContent: 'space-between',
-  },
-}));
-
-const StyleNavLink = styled(NavLink)(({ theme }) => ({
-  '&': {
-    color: 'inherit',
-    textDecoration: 'none',
   },
 }));
 
@@ -31,6 +23,9 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   },
   '&.active .MuiTypography-root': {
     fontWeight: 'bold',
+  },
+  '&:hover': {
+    background: 'inherit',
   },
 }));
 
